@@ -8,7 +8,7 @@ export default function Introduction() {
         <figure class="intro-figure">
           <img
             class="intro-pic"
-            src="assets/gp-2020-lookkback.png"
+            src="public/gp-2020-lookkback.png"
             alt="gabe-pagunuran-picture"
           />
           <figcaption>Testing out my sister's new camera</figcaption>
