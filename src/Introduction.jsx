@@ -1,7 +1,66 @@
+import Header from "./Header";
+import Footer from "./Footer";
+
 export default function Introduction() {
-    return (
-
-
-
-    );
+  return (
+    <>
+        <h2>Introduction | Gabriel Pagunuran</h2>
+        <figure class="intro-figure">
+          <img
+            class="intro-pic"
+            src="assets/gp-2020-lookkback.png"
+            alt="gabe-pagunuran-picture"
+          />
+          <figcaption>Testing out my sister's new camera</figcaption>
+        </figure>
+        <ul>
+          <li>
+            <b>Personal Background: </b>I was born in New Brunswick, NJ, but I
+            spent most of my life in Concord, NC. I still live in Concord with
+            my parents.{" "}
+          </li>
+          <li>
+            <b>Academic Background: </b> I went to Cox Mill Elementary, Harris
+            Road Middle, and Cox Mill High school. I started my college career
+            in Appalachian State University studying music production, moved to
+            CPCC for financial reasons, then changed my major to Computer
+            Science and eventually ended up pursuing a degree closer to home in
+            UNCC.
+          </li>
+          <li>
+            <b>Courses I'm Taking & Why</b>
+            <ul>
+              <li>
+                <b>MATH1242 - Calculus 2: </b>This is required for my major, but
+                I am interested in continuing my math studies to work towards a
+                math minor.
+              </li>
+              <li>
+                <b>ITSC3146 - Intro to Operating Sys. & Networking</b> I am very
+                interested in operating systems. I would like what I learn in
+                this class to create some personal projects.
+              </li>
+              <li>
+                <b>ITIS3200 - Intro to Info Security and Privacy: </b>This class
+                very closely relates to one of my dream occupations: creating
+                and maintaining cybersecurity measures for a public database,
+                like online libraries.
+              </li>
+              <li>
+                <b>ITIS3135 - Front-End Web App Development: </b>I figure that
+                concepts in this course are essential to know for anyone that
+                wants to create a nice portfolio for computer science.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="memorable-item">
+          <b>
+            Come visit me at the{" "}
+            <a href="https://esports.charlotte.edu/">CLT Esports Arena!</a>
+          </b>
+        </p>
+        <p>I am not a bird.</p>
+    </>
+  );
 }

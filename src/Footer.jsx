@@ -1,6 +1,7 @@
 export default function Footer() {
   return (
     <footer>
+        <hr />
       <nav>
         | <a href="https://webpages.charlotte.edu/gpagunu1/">CLT Web</a> |
         <a

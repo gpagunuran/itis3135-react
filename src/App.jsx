@@ -10,21 +10,14 @@ function App() {
   return (
     <>
       {/*these empty elements are called fragments, which are used to put multiple elements into a single parent element*/}
-      <head>
-        <title>ITIS3135 | Gabriel Pagunuran's | Generic Parakeet | Home</title>
-        <script
-          src="https://lint.page/kit/4d0fe3.js"
-          crossorigin="anonymous"
-        ></script>
-      </head>
-      <body>
-        <Header />
-        <main>
-          <h2>Home</h2>
-          <p>This is my ITIS3135 Course Home Page.</p>
-        </main>
-        <Footer />
-      </body>
+        <h2>Home</h2>
+        <p>This is my ITIS3135 Course Home Page.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+          omnis distinctio iusto! Dolore, animi? Cupiditate minus reiciendis
+          cumque nulla. Tempora ab ex sed possimus voluptate et est. Reiciendis,
+          repudiandae sed.
+        </p>
     </>
   );
 }
