@@ -1,0 +1,42 @@
+export default function Footer() {
+  return (
+    <footer>
+      <nav>
+        | <a href="https://webpages.charlotte.edu/gpagunu1/">CLT Web</a> |
+        <a
+          href="https://github.com/gpagunuran/gpagunuran.github.io"
+          target="_blank"
+        >
+          GitHub Repo
+        </a>{" "}
+        |
+        <a href="gpagunuran.github.io" target="_blank">
+          Github Link
+        </a>{" "}
+        |
+        <a href="https://www.freecodecamp.org/gpagunuran7419" target="_blank">
+          freeCodeCamp
+        </a>{" "}
+        |
+        <a
+          href="https://www.codecademy.com/profiles/gpagunuran7419"
+          target="_blank"
+        >
+          Codecademy
+        </a>{" "}
+        |
+        <a href="https://www.linkedin.com/in/gabriel-pagunuran" target="_blank">
+          LinkedIn
+        </a>{" "}
+        |
+        <p>
+          Page built by{" "}
+          <a href="pgndsn.com/" target="_blank">
+            Pagun Design
+          </a>{" "}
+          &copy;2025
+        </p>
+      </nav>
+    </footer>
+  );
+}
