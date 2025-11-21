@@ -2,14 +2,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router"; // Changed to HashRouter
 import Layout from "./Layout.jsx";
 import Introduction from "./Introduction.jsx";
 import Contract from "./Contract.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter> {/* Changed from BrowserRouter */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<App />} />
@@ -17,6 +17,6 @@ createRoot(document.getElementById("root")).render(
           <Route path="/contract" element={<Contract />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
