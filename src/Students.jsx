@@ -27,10 +27,12 @@ export default function Students() {
       });
   }, []);
 
-  const filteredStudents = students.filter(student =>
-    student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    student.mascot.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredStudents = students.filter(student => {
+    const fullName = `${student.name.first} ${student.name.last}`.toLowerCase();
+    const mascot = student.mascot?.toLowerCase() || '';
+    const search = searchTerm.toLowerCase();
+    return fullName.includes(search) || mascot.includes(search);
+  });
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % filteredStudents.length);
@@ -41,26 +43,26 @@ export default function Students() {
   };
 
   const renderStudent = (student) => (
-    <div key={student.id} className="student-card">
-      <h3>{student.name}</h3>
+    <div key={student.prefix} className="student-card">
+      <h3>{student.name.first} {student.name.last}</h3>
       <div className="student-info">
         <p><strong>Mascot:</strong> {student.mascot}</p>
-        {student.image && (
+        {student.media?.hasImage && student.media.src && (
           <img 
-            src={student.image} 
-            alt={`${student.name}'s photo`}
+            src={`https://dvonb.xyz${student.media.src}`}
+            alt={`${student.name.first} ${student.name.last}'s photo`}
             className="student-image"
           />
         )}
-        <p><strong>Personal Background:</strong> {student.personal_background}</p>
-        <p><strong>Academic Background:</strong> {student.academic_background}</p>
+        <p><strong>Personal Background:</strong> {student.backgrounds.personal}</p>
+        <p><strong>Academic Background:</strong> {student.backgrounds.academic}</p>
         
-        {student.background_in_subject && (
-          <p><strong>Background in Subject:</strong> {student.background_in_subject}</p>
+        {student.backgrounds.professional && (
+          <p><strong>Professional Background:</strong> {student.backgrounds.professional}</p>
         )}
         
-        {student.primary_computer_platform && (
-          <p><strong>Primary Computer Platform:</strong> {student.primary_computer_platform}</p>
+        {student.platform && (
+          <p><strong>Primary Computer Platform:</strong> {student.platform.device} ({student.platform.os})</p>
         )}
         
         {student.courses && student.courses.length > 0 && (
@@ -76,12 +78,14 @@ export default function Students() {
           </div>
         )}
         
-        {student.funny_thing && (
-          <p className="funny-thing"><strong>Funny/Interesting Thing:</strong> {student.funny_thing}</p>
+        {student.funFact && (
+          <p className="funny-thing"><strong>Fun Fact:</strong> {student.funFact}</p>
         )}
         
-        {student.something_i_would_like_to_share && (
-          <p className="share-item"><strong>Something to Share:</strong> {student.something_i_would_like_to_share}</p>
+        {student.quote && (
+          <p className="share-item">
+            <strong>Quote:</strong> "{student.quote.text}" - {student.quote.author}
+          </p>
         )}
       </div>
     </div>
