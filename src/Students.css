@@ -101,6 +101,32 @@
 .students-list {
   display: grid;
   gap: 2rem;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 1rem;
+  border: 2px solid var(--color3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar styling */
+.students-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.students-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.students-list::-webkit-scrollbar-thumb {
+  background: var(--color3);
+  border-radius: 8px;
+}
+
+.students-list::-webkit-scrollbar-thumb:hover {
+  background: var(--color5);
 }
 
 .student-card {
